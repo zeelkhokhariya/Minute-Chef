@@ -1,0 +1,1619 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Arial', sans-serif;
+    color: #1a1a1a;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    background-color: white;
+}
+
+.row {
+    max-width: 1140px;
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0;
+}
+
+.restaurantsHeader {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(image/1head.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.deliveryPolicyHeader {
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),url(image/policyBackground1.jpeg) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.feedbackHeader {
+    
+   background-position: center;
+    background-size: cover;
+    height: 130vh;
+    position: relative;
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(image/feedback-background.png);
+}
+
+.signUpHeader {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(image/loginBackground.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+}
+
+
+.paymentPageHeader
+{
+    
+     background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(image/loginBackground.jpg);
+    background-position: center;
+    background-size: cover;
+    
+    position: relative;
+    background-attachment: fixed;
+    overflow-y: scroll;
+    overflow-x: none;
+}
+
+.head {
+
+    color: rgba(255, 255, 255, 1.2);
+   
+
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    width: 1140px;
+    left: 50%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 0;
+}
+
+
+
+
+/*
+* Navigation
+*/
+
+.mainMenu {
+    float: right;
+    margin-top: 40px;
+}
+
+.mainMenu li {
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.mainMenu li a:link,
+.mainMenu li a:visited {
+    font-size: 85%;
+    padding: 4px 0px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.50s;
+}
+
+.feedbackHeader .mainMenu li a:link,
+.feedbackHeader .mainMenu li a:visited {
+    font-size: 85%;
+    padding: 4px 0px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.50s;
+}
+
+.mainMenu li a:link   [selected=true],
+.mainMenu li a:visited[selected=true] {
+    text-decoration: none;
+    color: rgb(236, 173, 87);
+    border-bottom: 2px solid #deb277;
+}
+
+.mainMenu li a:hover,
+.mainMenu li a:active {
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid #deb277;
+}
+
+.mainMenu li a:hover [selected=true],
+.mainMenu li a:active[selected=true] {
+    text-decoration: none;
+    color: rgb(236, 173, 87);
+    border-bottom: 2px solid #deb277;
+}
+
+
+/*
+* logo 
+*/
+
+.logo {
+    margin-top: 20px;
+    margin-left: 40px;
+    height: 80px;
+    width: auto;
+}
+
+
+
+
+
+
+/*
+** search 
+*/
+
+.SearchBox
+{
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    padding: 10px;
+    background-color: #c99316;
+     width: 550px;
+}
+
+.SearchButton
+{
+    margin: 0px;
+    padding: 20px;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: black;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SearchButton:hover
+{
+    background-color: lightblue;
+    transition: 0.95s;
+}
+
+.SearchTxt
+{
+    
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: black;
+    font-size: 20px;
+    line-height: 40px;
+    width: 90%;
+}
+
+.SearchTxt::placeholder {
+
+    color: white;
+    font-size: 20px;
+  }
+
+/* CSS for the list of Restaurants *******************************************************/
+.listOfRestaurantHeader{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(image/restaurants_bg.png);
+    background-color: #663c77;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    border-bottom: 1px dashed gray;
+}
+
+.listHeader{
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    
+}
+
+.nearbyHeader3
+{
+    padding-top: 5px;
+    font-size: 16px;
+}
+.nearbyHeader4
+{
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+.localRestaurant
+{
+    width: 90%;
+    background-color: floralwhite;
+    height: 30vh;
+    margin-left: 5%;
+    margin-top: 2%;
+    
+}
+
+.restaurantImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foodImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.firstBox
+{
+    float: left;
+    width: 33.3%;
+    height: 100%;
+    border-right: 1px solid gray;
+}
+
+.secondBox
+{
+    float: left;
+    width: 33.3%;
+     height: 100%;
+    border-right: 1px dashed gray;
+}
+
+.thirdBox
+{
+    float: left;
+    width: 33.3%;
+     height: 100%;
+    
+}
+
+.sub-secondBox
+{
+    
+    height: 50px;
+    margin-top: 15%;
+    width: 100%;
+    font-family: sans-serif;
+    
+    
+    
+}
+
+.restaurantName
+{
+    float: left;
+    width: 70%;
+    height: 100%;
+    text-align: center;
+}
+
+.restaurantReview
+{
+    padding-left: 30px;
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+
+.Menu-button
+{
+    margin-left: 55%;
+    margin-top:5%;
+    
+}
+
+.Menu-button .button {
+    display: inline-block;
+    width: 150px;
+    padding: 8px 0px;
+    background-color: #d39a09;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 200px;
+    text-align: center;
+    transition: background-color 0.25s, color 0.5s;
+    font-size: 15px;
+}
+
+.Menu-button .button:hover {
+    background-color: #f6bc2a;
+    color: #b71b1b;
+}
+
+.sub1-thirdBox
+{
+    margin-top: 20%;
+    margin-left: 30%
+}
+/* ending css for list of Restaurants*/
+
+/*CSS Menu*/
+.MenuHeader
+{
+    background:linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) ),url(image/menu-background.jpg) no-repeat center center fixed; 
+    /*background-color: brown;*/
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    border-bottom: 1px dashed gray;
+    line-height: 1.5;
+   font-family: 'Noto Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+   /* height: 100vh;*/
+}
+
+.menHeader
+{
+       font-family: 'Noto Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+   margin-top: 20px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: white;
+    width: 100%;
+}
+
+#inputForAddress
+{
+    padding-top: 8px; 
+}
+
+.RestaurantTitle
+{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+
+.comboHorizontal
+{
+    margin-top: 5%;
+    width: 100%;
+    height: 50vh;
+       font-family: 'Noto Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+    
+}
+
+.goBackBox1
+{
+    float: left;
+    height: 100%;
+    width: 4%;
+}
+
+.leftCircle
+{
+   margin-top: 20vh;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 40px;
+}
+
+.leftCircle:hover
+{
+    color: white;
+    background-color: black;
+    transition: 0.5s;
+}
+
+.comboBox1
+{
+    color: white;
+    float: left;
+    width: 30.66%;
+     height: 100%;
+    
+    
+}
+
+.comboBox2
+{
+    color: white;
+    float: left;
+    width: 30.66%;
+     height: 100%;
+    
+}
+
+.comboBox3
+{
+    color: white;
+    float: left;
+    width: 30.66%;
+     height: 100%;
+   
+}
+
+
+.goNextBox1
+{
+    float: left;
+    height: 100%;
+    width: 4%;
+}
+
+.rightCircle
+{
+   margin-top: 20vh;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 40px;
+}
+
+.rightCircle:hover
+{
+    color: white;
+    background-color: black;
+    transition: 0.5s;
+}
+
+
+.comboBox1-Heading
+{
+    text-align: center;
+    font-size: 17px;
+    
+}
+
+.comboBox2-Heading
+{
+    text-align: center;
+    font-size: 17px;
+    
+}
+.comboBox3-Heading
+{
+    
+    text-align: center;
+    font-size: 17px;
+    
+}
+
+.comboBox1-image
+{margin-top:5px;
+    float: left;
+    width: 60%;
+    height: 45%;
+    background-color: cadetblue;
+}
+.comboBox1-NamePrice
+{
+    float: left;
+    width: 40%;
+    height: 45%;
+    
+}
+
+.comboBox1-itemName
+{
+    margin-top: 35px;
+    float: left;
+    padding-left: 3px;
+    font-weight: 600;
+    
+}
+
+.comboBox1-itemPrice
+{
+    margin-top: 35px;
+    float: left;
+    padding-left: 25px;
+    font-weight: 600;   
+}
+
+.comboBox1-Description
+{
+    float: left;
+    width: 100%;
+    height: 25%;
+   
+    font-size: 16px;
+    padding: 15px;
+}
+.comboBox1-quantity
+{
+    width: 50%;
+    float: left;
+    margin-top: 30px;
+}
+
+.plusMinusButton
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: greenyellow;
+}
+
+.plusMinusButton:hover
+{
+    transition: 0.2s;
+    color: white;
+    background-color: yellowgreen;
+}
+
+.plusMinusButton:disabled, .plusMinusButton:hover:disabled
+{
+    transition: 0.0s;
+    color: gray;
+    background-color: white;
+}
+
+
+
+.addtoCart-button
+{
+    margin-left: 0%;
+    margin-top:0%;
+    
+}
+
+.addtoCart-button .addbutton, .addtoCart-button .addbutton[nohover=true]:hover {
+    display: inline-block;
+    width: 150px;
+    padding: 8px 0px;
+    background-color: #d39a09;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    
+    text-align: center;
+    font-size: 15px;
+}
+
+.addtoCart-button .addbutton:hover {
+    background-color: #f6bc2a;
+    color: #b71b1b;
+    transition: background-color 0.25s, color 0.5s;
+}
+
+.addtoCart-button .addbutton:not([href]), .addtoCart-button .addbutton:hover:not([href]) {
+    transition: 0.0s;
+    background-color: white;
+    color: gray;
+}
+
+
+
+
+
+.comboBox2-image
+{
+    margin-top:5px;
+    float: left;
+    width: 60%;
+    height: 45%;
+    background-color: cadetblue;
+}
+.comboBox2-NamePrice
+{
+    float: left;
+    width: 40%;
+    height: 45%;
+    
+}
+
+.comboBox2-itemName
+{
+    margin-top: 35px;
+    float: left;
+    padding-left: 3px;
+    font-weight: 600;
+    
+}
+.comboBox2-itemPrice
+{
+    margin-top: 35px;
+    float: left;
+    padding-left: 15px;
+    font-weight: 600;
+}
+
+.comboBox2-Description
+{
+    float: left;
+ width: 100%;
+    height: 25%;
+    
+    font-size: 16px;
+    padding: 15px;
+}
+.comboBox2-quantity
+{
+    width: 50%;
+    float: left;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+.comboBox3-image
+{
+    margin-top:5px;
+    float: left;
+    width: 60%;
+    height: 45%;
+    background-color: cadetblue;
+}
+.comboBox3-NamePrice
+{
+    float: left;
+    width: 40%;
+    height: 45%;
+    
+}
+
+.comboBox3-itemName
+{
+    margin-top: 35px;
+    float: left;
+    padding-left: 0px;
+    font-weight: 600;
+    
+}
+
+.comboBox3-itemPrice
+{
+    margin-top: 35px;
+    float: left;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.comboBox3-itemPrice
+{
+    margin-top: 35px;
+    float: left;
+    padding-left: 15px;
+    font-weight: 600;
+    
+}
+
+.comboBox3-Description
+{
+    float: left;
+ width: 100%;
+    height: 25%;
+  
+    font-size: 16px;
+    padding: 13px;
+}
+
+
+.comboBox3-quantity
+{
+    width: 50%;
+    float: left;
+    margin-top: 30px;
+}
+
+/*------------------------------------------ending combos---------------------------*/
+
+
+
+
+
+/*---------------------------------------starting menu-------------------------------*/
+
+.wholeMenu
+{
+    color: white;
+    width: 100%;
+    height: 100vh;
+    border: 1px solid white;
+    
+}
+
+/*starting Css for Categories*/
+.Categories
+{
+    
+    width: 20%;
+    height: 100vh;
+   /* background-color: aliceblue;*/
+    border-right: 1px solid white;
+    float: left;
+}
+
+.Categories-Heading
+{
+    border-bottom: 1px solid white;
+    text-align: center;
+    height: 10vh;
+    width: 100%;
+    
+}
+
+.category
+{
+    color: blue;
+    display: block;
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.category a
+{
+    display: block;
+    padding-top: 20px;
+   text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+
+.active {
+  background-color: #666;  
+    transition: 0.5s;
+}
+
+.category:hover
+{
+    
+    background-color: brown;
+    transition: 0.8s;
+}
+
+
+
+
+
+
+
+/*ending css for categories
+
+
+
+/*Starting Css for WholeMenu*/
+
+.MenuOfRestaurant
+{
+    float: left;
+    width: 55%;
+    height: 100%;
+    border-right: 1px solid white;
+    overflow: scroll;
+    scrollbar-arrow-color: gray;
+    scrollbar-base-color: #3B5998;
+}
+
+.MenuOfRestaurant-Heading
+{
+    border-bottom: 1px solid white;
+    text-align: center;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.Item
+{
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid white; 
+
+    
+}
+
+.Item-Image
+{
+    float: left;
+    margin-left: 0%;
+   margin-top: 0%;
+    width: 30%;
+    height: 80%;
+    background-color: aqua;
+    
+}
+
+
+.Item-Description
+{
+    float: left;
+    margin-top: 0;
+    width: 70%;
+    height: 83%;
+}
+
+.Item-Name
+{
+    width: 85%;
+    float: left;
+    
+}
+
+.Item-Review
+{
+    float: left;
+    width: 33%;
+    height:12%;
+    text-align: center;
+    
+}
+
+.Item-Review span
+{
+    color: white;
+    
+}
+.Item-Quantity
+{
+    float: left;
+    padding-top: 0%;
+    width: 33%;
+    height:10%;
+    
+}
+.QTYNAME
+{
+    float: left;
+}
+.Item-QuantityDiv
+{
+    margin-left: 25%;
+
+}
+.Item-Addtocart
+{
+    float: left;
+    width: 20%;
+    height:10%;
+    margin-left: 7%;
+    
+}
+
+
+.Item-Addtocart-button
+{
+    
+    margin-top:0%;
+    height: 100%;
+    
+    
+}
+
+.Item-Addtocart-button .Item-Addtocart-button, .Item-Addtocart-button .Item-Addtocart-button[nohover=true]:hover {
+    display: inline-block;
+    width: 150px;
+    padding-top: 5%;
+    /*padding: 8px 0px;*/
+    background-color: #d39a09;
+    margin-top: 0px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+
+.Item-Addtocart-button .Item-Addtocart-button:hover {
+    background-color: #f6bc2a;
+    color: #b71b1b;
+    transition: bacgkround-color 0.25s, color 0.5s;
+}
+
+.Item-Addtocart-button .Item-Addtocart-button:not([href]), .Item-Addtocart-button .Item-Addtocart-button:hover:not([href]) {
+    background-color: white;
+    color: gray;
+}
+
+/*Ending Css for WholeMenu*/
+
+
+
+
+
+
+/*Starting Css for Cart*/
+
+.Carts
+{
+    
+    float: left;
+    width: 25%;
+    height: 100vh;
+    overflow: scroll;
+}
+.Cart-Heading
+{
+    border-bottom: 1px solid black;
+    text-align: center;
+    height: 10vh;
+    width: 100%;
+    
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: white;
+}
+
+.cart-column {
+    
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    color: white;
+    display: flex;
+}
+
+.cart-food-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.cart-items .cart-price {
+    flex-grow: 100;
+}
+
+.cart-item {
+    
+    width: 37%;
+}
+
+.cart-price {
+    margin-right: 5%;
+    margin-left: auto;
+    flex-basis: 10%;
+    font-size: 1.2em;
+    color: white;;
+    font-size: 18px;
+}
+
+.cart-quantity {
+    width: 40%;
+    font-size: 18px;
+}
+
+
+.cart-item-title {
+    color: white;
+    margin-left: .5em;
+    font-size: 18px;
+    
+}
+
+.cart-item-image {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: aqua
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    height: 50%;
+    justify-self: flex-end;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid white;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.Cart-Title-Container {
+    max-width: 85%;
+}
+
+.Cart-Title {
+    margin-left: 5px;
+    margin-right: 5px;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+.Cart .plusMinusButton {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: white;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+
+/*Ending Css for Cart*/
+
+
+/* starting CSS for chatbox */
+
+.popup {
+    margin: 50px;;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+  * {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+  
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+/* stating css for footer**********************/
+footer
+{
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 200px;
+    color: white;
+    margin-top: 2%;
+}
+
+.footerFirst
+{
+    position: relative;
+    float: left;
+    width: 30%;
+     height: 100%;
+}
+.footerLogo
+{
+    
+    margin-top: 0%;
+    margin-left: 15%;
+}
+
+.footerLogo img
+{
+    height: 100px;
+}
+
+
+.footerSecond
+{
+    position: relative;
+    float: left;
+    width: 30%;
+     height: 100%;
+}
+
+.footerData
+{
+    margin-top: 2%;
+    margin-left: 30%;
+    font-size: 18px;
+}
+.contact,.mail_id,.feedback,.guide
+{
+    text-decoration:none;
+    color:gray;
+    transition:1s;
+    
+}
+.contact:hover,.mail_id:hover,.feedback:hover
+{
+    color:white;
+}
+
+.footerThird
+{
+    position: relative;
+    float: left;
+    width: 30%;
+     height: 100%;
+    margin-left: 8%;
+    background-color: black;
+    text-align: center;
+}
+
+.social
+{
+    position: relative;
+    display:inline-block;
+}
+.social a
+{
+    display:inline-block;
+    height:35px;
+    width:35px;
+    font-size:20px;
+    background-color:#FFF;
+    border-radius:50%;
+    text-align:center;
+    line-height:35px;
+    margin:8px;
+}
+.facebook
+{
+    color:#3B5998;
+}
+.facebook:hover
+{
+    background-color:#3B5998;
+    color:#FFF;
+}
+.twitter
+{
+    color:#2795E9;
+}
+.twitter:hover
+{
+    background-color:#2795E9;
+    color:#FFF;
+}
+.instagram
+{
+    color:#3F729B;
+}
+.instagram:hover
+{
+    background-color:#3F729B;
+    color:#FFF;
+}
+.google
+{
+    color:#C32F10;
+}
+.google:hover
+{
+    background-color:#C32F10;
+    color:#FFF;
+}
+.pinterest
+{   
+    color:#CC2127;
+}
+.pinterest:hover
+{
+    background-color:#CC2127;
+    color:#FFF;
+}
+.up-arrow
+{
+    color:blue;
+}
+
+
+
+/*------------------------------------------CSS for the signup page -----------------*/
+.loginForm
+{
+   
+    margin: 0;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+ 
+    text-align: center
+}
+.loginForm h1 {
+  font-family: "Arial", sans-serif;
+  font-size: 50px;
+}
+.login h2 {
+  font-size: 50px;
+}
+
+
+label {
+  width: 240px;
+  display: inline-block;
+  font-family: "Airal", sans-serif;
+  font-size: 20px;
+  text-align: center;
+    
+}
+.signup-container {
+  width: 100%;
+  clear: both;
+  margin: auto;
+}
+
+
+#username {
+  font-size: 20px;
+    margin-top: 10px;
+}
+#password {
+    margin-top: 10px;
+  font-size: 20px;
+}
+#submit {
+  width: 100px;
+  height: 40px;
+  background-color: grey;
+  color: white;
+  font-size: 20px;
+  font-family: "font", sans-serif;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+#submit:hover {
+  background-color: black;
+}
+
+/*--------------------------------------CSS for the FeedbCK----------------*/
+
+
+.feedbackForm
+{
+    background-color: rgba(55,55,55,.4);
+    scroll-behavior: smooth;
+    line-height: 1.5;
+    color: white;
+     position: absolute;
+    margin: 0;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  overflow:scroll;
+  height:80vh;
+
+  min-width: 60%;
+    
+   
+}
+
+.feedbackH1
+{
+    margin-right: 45%;
+    margin-left: 45%;
+    width: 10%;
+    align-content: center;
+    position: absolute;
+    
+}
+
+
+
+/* dropdown css */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F6BC2A;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-bottom-left-radius:10%;
+    border-bottom-right-radius: 10% ;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: lightyellow;
+    transition: 0.8s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;transition: 0.8s;
+}
+
+/*Css for the deliveryPolicy*/
+.DP-header
+{
+    text-align: center;
+    margin-top: 5%;
+    width: 100%;
+    height: 200px;
+     font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+
+.DP-section1
+{
+    float: left;
+    display: inline-block;
+    width: 20%;
+    height: 385px;
+    background-color: white;
+    margin-left: 10%;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+}
+.DP-section2
+{
+    font-family: Verdana, Geneva, sans-serif;
+    display: inline-block;
+     width: 20%;
+    height: 385px;
+    background-color: white;
+    margin-left: 10%;
+    font-size: 14px;
+}
+.DP-section3
+{
+    font-family: Verdana, Geneva, sans-serif;
+    float: left;
+    display: inline-block;
+    width: 20%;
+    height: 385px;
+    background-color: white;
+    margin-left: 10%;
+    font-size: 14px;
+}
+
+.DP-section4
+{
+    margin-top: 3%;
+    text-align: center;
+    width: 100%;
+   color: white;
+    height: auto;
+     font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+}
+
+
+ .map{
+     margin-left: 2.5%;
+	width: 95%;
+	height: auto;
+	align-content: center;
+	text-align: center;
+}
+.map img{
+	text-align: center;
+	width: 100%;
+	height:auto;
+}
+
+
+
+/*for scroll*/
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+
+
+#loggedin-logout-link {
+    color: orange;
+}
+
+
+#loggedin-logout-link:hover {
+    color: rgb(255, 100, 50);
+}

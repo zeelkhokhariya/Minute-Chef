@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/customize.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/accepted.css">
+    <link href="https://fonts.googleapis.com/css?family=Mukta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="resources/js/main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>MinuteChef</title>
+    <link rel="stylesheet" href="resources/css/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+
+<body>
+    
+    <header id="header" class="restaurantsHeader">
+        <a name="up"></a>
+        <nav>
+            <div class="firstrow">
+                <a href="#" id="logo-button">
+                    <img src="resources/css/image/logo.png" alt="logo" class="logo">
+                </a>
+                <ul class="mainMenu">
+                    <li><a selected=true id="restaurantsNavButton" href="#"
+                            onclick="showPage('restaurants')">Restaurants</a></li>
+                    <li><a selected=false id="deliveryPolicyNavButton" href="#"
+                            onclick="showPage('deliveryPolicy')">Food delivery policy</a></li>
+                    <li><a selected=false id="feedbackNavButton" href="#" onclick="showPage('feedback')">Feedback</a>
+                    </li>
+                    <li><a selected=false id="signUpNavButton" href="#" onclick="showPage('signUp')">Log in</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="restaurants">
+            <div class='head'>
+                <h1>One thousand flavors in one place.</h1>
+            </div>
+
+            <div class="SearchBox">
+                <input class="SearchTxt" type="text" placeholder="Enter your address" id="searchaddress" required>
+                <a class="SearchButton" href="#" onclick="showPage('listOfRestaurant')">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <div id="deliveryPolicy" style="display:none;">
+            <div class="DP-header">
+                <h1>
+                    MinuteChef Delivery Policy
+                </h1>
+
+                <h3>
+                    Our delivery policy is more of a promise.<br> We are a hard working business group with no money but we will do our best with what we have and get your food to you and not be even a minute late!
+                </h3>
+
+            </div>
+
+            <div class="DP-section1">
+                <h4>
+                    Delivery costs:
+                </h4>
+
+                <p style="line-height: 1.6;">All item prices are non negotiable and delivery costs are applied to the cart after the order is complete. Delivery price varies with the restaurant's distance from the address given by the customer. If you request for a refund after your food has already been delivered, you will not get the delivery fee back but depending on the reason for the refund request, you would get money back for the order.</p>
+            </div>
+
+            <div class="DP-section2">
+                <h4>
+                    Delivery times:
+                </h4>
+
+                <p style="line-height: 1.6;">
+                    Our policy states that your food will be delivered within the estimated time all the time unless an emergency situation occurs. We revise our delivery times every season to ensure that our estimations are accurate no matter how the weather is. The one situation that we cannot guarantee is snow storms and rain storms as traffic operates differently during those conditions. We have drivers available 24 hours a day and 7 days a week so you only have to worry about your restaurant being open!
+                </p>
+            </div>
+
+            <div class="DP-section3">
+                <h4>
+                    Delivery packaging:
+                </h4>
+
+                <p style="line-height: 1.6;">
+                    How our delivery drivers receive your food is how they deliver it. We are not responsible of the accuracy of the order as we do not open to check ourselves. That is the responsibility of the restaurant but we can help you handle any issues that arise concerning wrong orders or badly done orders.
+                </p>
+            </div>
+
+
+
+            <div class="DP-section4">
+                <h4>
+                    Delivery areas:
+                </h4>
+                <p style="line-height: 1.6;">
+                    The map below shows the regions of Winnipeg that we operate in. We are still a growing company so other areas and cities will be phased in as we become a bigger company!
+                </p>
+
+                <div class="map"><img src="resources/css/image/map.jpeg" usemap="#cmap">
+                    <map name="cmap">
+                        <area style="background-color: grey;" shape="rect" coords="687 352 852 388" href="home.html" title="WINTER HOUSE">
+                    </map>
+                </div>
+            </div>
+        </div>
+
+        <div id="feedback" style="display:none; ">
+            <div class="feedbackH1">
+                <i class='fas fa-comment-alt' style='font-size:120px; color: lightgray; margin-left: 2%'></i>
+                <h1 style="color: white;">Feedback</h1>
+            </div>
+
+            <div id="feedbackForm" class="feedbackForm">
+                <br>
+                <p>Use this form to tell us your thoughts about us!
+                    <br>We will review your feedback carefully.
+                    <br>We may contact you through email that you provided below.
+                </p>
+
+                <h1></h1>
+                <form id="feedbackActualForm">
+                    <p for="Email1">Email: </p>
+                    <input name="Email1" type="Email" placeholder="1234@minuteChef.com" required><br><br>
+
+                    <p for="name">Name: </p>
+                    <input id="name" type="text" placeholder="name" required><br><br>
+                    <p>Was it easy to find a restaurant that you were looking for?</p><br>
+
+                    <input name="YorN" type="radio" id="yes1" value="Yes" style="float: left;">
+                    <p for="yes1" style="float: left; margin-left: 2%;">Yes</p>
+                    <input name="YorN" type="radio" id="no1" value="No" style="float: left; margin-left: 2%">
+                    <p for="no1" style="margin-left: 13%;">No</p>
+                    <br>
+
+                    <p>Was your food still hot when it's delivered?</p><br>
+
+
+                    <input name="NorY" type="radio" id="yes2" value="Yes" style="float: left;">
+                    <p for="yes2" style="float: left; margin-left: 2%;">Yes</p>
+                    <input name="NorY" type="radio" id="no2" value="No" style="float: left; margin-left: 2%">
+                    <p for="no2" style="margin-left: 13%;">No</p>
+                    <br>
+
+                    <p for="Subject">Subject: </p>
+                    <input id="Subject" type="text" placeholder="Subject" required><br><br>
+
+                    <p>Feedback type:</p>
+                    <select name="color" style="float: left;">
+                        <option>Customer service</option>
+                        <option>Program bug</option>
+                        <option>Restaurant problem</option>
+                        <option>Delivery Service</option>
+                        <option>Account/Privcy</option>
+                        <option>Others</option>
+
+
+                    </select>
+
+                    <textarea name="paragraph" rows="10" cols="80"></textarea><br>
+                    <br>
+                    <button>Submit</button><br><br>
+                </form>
+            </div>
+            <div id="feedback-thanks" class="feedbackForm" style="display:none">
+                Thank you for your feedback!
+            </div>
+        </div>
+
+        <div id="signUp" style="display:none;">
+            <div id="loginPage" class="loginForm">
+               <div style="margin-top: 15%;"> <i  class='fas fa-child' style='font-size:80px; color: bisque;'></i>
+                <h1 style="color: white;">Log in</h1></div>
+
+                <form id="loginForm">
+                    <div class="signup-container">
+                        <label for="username" style="color: white;"> Email </label>
+                        <input id="username" type="Email" placeholder="yourID@gmail.com" required>
+                        <h2> </h2>
+                        <label for="password" style="margin-top: 30px; color: white;">Password</label>
+                        <input id="password" type="password" placeholder="password" required>
+                    </div>
+                    <h3> </h3>
+                    <button id="loginSubmit" style="margin-top: 30px">Go!</button>
+                    <h4> </h4>
+                    <h5></h5>
+                </form>
+                <button id="guest" style="margin-top: 30px">Continue as a Guest</button>
+            </div>
+            <div class="loginForm" id="loggedin-page">
+                <h1 style="color: white;" id="loggedin-message">You are already logged in.</h1>
+                <br/>
+                <a href="#" id="loggedin-logout-link">Log out</a>
+            </div>
+        </div>
+
+        <!--********************************list of restaurant**************************************************-->
+
+        <div id="listOfRestaurant" style="display:none;">
+            <div class="listHeader">
+                <h2>Delivery To,</h2>
+                <h3 class="nearbyHeader3" id="inputtaker"></h3>
+                <h4 class="nearbyHeader4"> Local restaurants near by:</h4>
+            </div>
+
+            <!-- Used by resources/js/main.js as a template -->
+            <div class="localRestaurant">
+                <div class="firstBox">
+                    <img class="restaurantImage"></img>
+                </div>
+
+                <div class="secondBox">
+                    <div class="sub-secondBox">
+                        <div class="restaurantName"></div>
+                        <div class="restaurantReview"></div>
+                    </div>
+                    <div class='Menu-button'>
+                        <a href="#" class="button">Menu</a>
+                    </div>
+                </div>
+
+                <div class="thirdBox">
+                    <div class="sub1-thirdBox"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- starting Menu------------------->
+        <div id="Menu" style="display:none;">
+
+            <div class="menHeader">
+                <h2 class="Delivery">Delivery To,</h2>
+                <h3 id="inputForAddress"></h3>
+            </div>
+
+            <div class="RestaurantTitle">
+                <h1 id="restaurantTitle"></h1>
+            </div>
+
+            <!-- for Combos ---->
+
+            <div class="comboHorizontal">
+               
+
+                <div class="comboBox1">
+                    <div class="comboBox1-Heading">
+                        <h2>Today's special</h2>
+                    </div>
+                    <div class="comboBox1-image">
+                        <img class="foodImage"></img>
+                    </div>
+                    <div class="comboBox1-NamePrice">
+                        <p class="comboBox1-itemName">Special 1</p>
+                        <p class="comboBox1-itemPrice">$25</p>
+                    </div>
+
+                    <div class="comboBox1-Description">
+                        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                    </div>
+
+                    <div class="comboBox1-quantity">
+                        <p  class="QTYNAME" style="font-size: 15px;font-style: italic;font-weight: 600">QTY</p>
+                        <input style="margin-left: 5%;" class="plusMinusButton" type='button' name='add' value="+" />
+
+                        <input style="width: 10%" value="1" type='text' name='qty' class='ItemQty' />
+
+                        <input class="plusMinusButton" type='button' name='subtract' value="-" />
+                    </div>
+
+                    <div class='addtoCart-button dropdown'>
+                        <a href="#" class="addbutton dropbtn" name="addbutton">add to cart</a>
+                        <div class="dropdown-content"></div>
+                    </div>
+
+
+                </div>
+
+                <div class="comboBox2">
+                    <div class="comboBox2-Heading">
+                        <h2>Combo 1</h2>
+                    </div>
+                    <div class="comboBox2-image">
+                        <img class="foodImage"></img>
+                    </div>
+                    <div class="comboBox2-NamePrice">
+                        <p class="comboBox2-itemName">Comb1title</p>
+                        <p class="comboBox2-itemPrice">$25</p>
+
+                    </div>
+
+                    <div class="comboBox2-Description">
+                        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb<br>
+                            bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+                    </div>
+
+                    <div class="comboBox2-quantity">
+                        <p class="QTYNAME" style="font-size: 15px;font-style: italic;font-weight: 600">QTY</p>
+                        <input style="margin-left: 5%;" class="plusMinusButton" type='button' name='add' value="+" />
+
+                        <input style="width: 10%" value="1" type='text' name='qty' class='ItemQty' />
+
+                        <input class="plusMinusButton" type='button' name='subtract' value="-" />
+                    </div>
+
+                    <div class='addtoCart-button dropdown'>
+                        <a href="#" class="addbutton dropbtn" name="addbutton">add to cart</a>
+                        <div class="dropdown-content"></div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="comboBox3">
+                    <div class="comboBox3-Heading">
+                        <h2>Combo 2</h2>
+                    </div>
+                    <div class="comboBox3-image">
+                        <img class="foodImage"></img>
+                    </div>
+                    <div class="comboBox3-NamePrice">
+                        <p class="comboBox3-itemName">Combo2title</p>
+                        <p class="comboBox3-itemPrice">$25</p>
+
+                    </div>
+
+
+                    <div class="comboBox3-Description">
+                        <p>ccccccccccccccccccccccccccccccccccccccccc<br>
+                            cccccccccccccccccccccccccccccccc</p>
+                    </div>
+
+                    <div class="comboBox3-quantity">
+                        <p class="QTYNAME" style="font-size: 15px;font-style: italic;font-weight: 600">QTY</p>
+                        <input style="margin-left: 5%;" class="plusMinusButton" type='button' name='add' value="+" />
+
+                        <input style="width: 10%" value="1" type='text' name='qty' class='ItemQty' />
+
+                        <input class="plusMinusButton" type='button' name='subtract' value="-" />
+                    </div>
+
+                    <div class='addtoCart-button dropdown'>
+                        <a href="#" class="addbutton dropbtn" name="addbutton">add to cart</a>
+                        <div class="dropdown-content"></div>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+
+            <!--ending for Combos ---->
+
+            <!---------------starting Menu-------------------------------->
+
+
+
+
+
+            <div class="wholeMenu">
+
+                <div class="Categories">
+                    <div class="Categories-Heading">
+                        <h1 class="Categories-Title">CATEGORIES</h1>
+                    </div>
+                    <div class="category active">
+                        <a href="#" selected="true">Chicken</a>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="MenuOfRestaurant">
+                    <div class="MenuOfRestaurant-Heading">
+                        <h1 class="MenuOfRestaurant-Title">MENU</h1>
+                    </div>
+
+                    <div class="Item">
+                        <div class="Item-Image">
+                            <img class="foodImage"></img>
+                        </div>
+
+                        <div class="Item-Description">
+                            <h2 class="Item-Name">Chicken1</h2>
+                            <h2 class="Item-Price">$20</h2>
+                            <span class="Item-Information" style="margin-top: 20px;" >aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaaaaaaaa
+                                aaaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
+                        </div>
+
+
+                        <div class="Item-Review">
+                            <span>123 likes</span>
+                        </div>
+
+
+                        <div class="Item-Quantity">
+                            <div class="Item-QuantityDiv">
+                                <p style="font-size: 15px;font-style: italic;font-weight: 600" class="QTYNAME">QTY:</p>
+                                <input style="margin-left: 5%;" class="plusMinusButton" type='button' name='add' value="+" />
+
+                                <input style="width: 10%" value="1" type='text' name='qty' class='ItemQty' />
+
+                                <input class="plusMinusButton" type='button' name='subtract' value="-" />
+                            </div>
+                        </div>
+                        <div class="Item-Addtocart">
+                            <div class='Item-Addtocart-button dropdown'>
+                                <a href="#" class="Item-Addtocart-button dropbtn" name="addbutton">add to cart</a>
+                                <div class="dropdown-content"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="Carts">
+                    <div class="Cart">
+                        <div class="MenuOfRestaurant-Heading">
+                            <input class="plusMinusButton" type='button' name='subtract' value="-" aria-label="delete cart" />
+                            <div class="Cart-Title-Container">
+                                <h1 class="Cart-Title">CART</h1>
+                            </div>
+                            <input class="plusMinusButton" type='button' name='add' value="+" aria-label="new cart" />
+                        </div>
+                        <div class="cart-row cart-noitems" style="display:block;">
+                            As you add items to the cart, they will appear here.
+                        </div>
+                        <div class="cart-row cart-column-names" style="display:none;">
+                            <span class="cart-item cart-header cart-column">ITEM</span>
+                            <span class="cart-price cart-header cart-column">PRICE</span>
+                            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                        </div>
+                        <div class="cart-items" style="display:none;">
+                            <div class="cart-food-item">
+                                <div class="cart-row">
+                                    <div class="cart-item cart-column">
+                                        <img class="cart-item-image"></img>
+                                        <span class="cart-item-title">Chicken1</span>
+                                    </div>
+                                    <span class="cart-price cart-column">$19.99</span>
+                                    <div class="cart-quantity cart-column">
+                                        <input class="cart-quantity-input" type="number" min="0" max="99" value="1">
+                                        <button class="btn btn-danger" type="button">REMOVE</button>
+                                    </div>
+                                </div>
+                                <div class="pay-item-customization cart-item-spiciness">Medium spicy</div>
+                                <div class="pay-item-customization cart-item-special-instructions">Special instructions:</div>
+                            </div>
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Total</strong>
+                            <span class="cart-total-price">$39.97</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div id="customize-modal" class="modal">
+            <div id="customize-box">
+                <div class="customize-box-header">
+                    <h2 class="customize-heading">Are you sure you want to add to cart?</h2>
+                        <br><br>
+                    <div class="customize-item">
+        
+                        <div class="customize-item-heading">
+                            <h4>Item: COMBO1</h4>
+                        </div>
+                        <div class="customize-item-qty">
+                            <h4>QTY: 3</h4>
+                        </div>
+                        <div class="customize-item-price">
+                            <h4>price: $4</h4>
+                        </div>
+        
+                    </div>
+                </div>
+        
+                <div class="customize-box-content">
+                    <div class="customize-asperqty">
+                        <div class="customize-as-qty-box">
+                            <h3 class="customize-as-qty-box-heading">For QTY:1</h3>
+                            <form class="customize-form">
+        
+                                <span>What kind of taste you want?</span><br><br>
+                                <input type="radio" name="taste" value="less">
+                                <span for="male">Less spicy</span><br><br>
+                                <input type="radio" name="taste" value="medium" checked="checked">
+                                <span for="female">Medium spicy</span><br><br>
+                                <input type="radio" name="taste" value="more">
+                                <span for="other">Extra spicy</span><br><br>
+                                <h4>Special instruction or any allergies....</h4>
+                                <textarea type="text" class="special-instruction" placeholder="Any special instruction or any allergies..."></textarea>
+        
+                            </form>
+        
+                        </div>
+        
+                        <div class="customize-box-button">
+        
+                            <input type="button" class="customize-add-button" value="Add">
+                            <input type="button" class="customize-cancel-button" value="Cancel">
+                            
+                        </div>
+        
+                    </div>
+        
+        
+                </div>
+            </div>
+        </div>
+
+
+
+<!--*******************************Payment page html**************************************************-->
+
+
+<div id="paymentPage" style="display: none;" >    
+    <div class="payment-row" style="width: 77%;">
+      <div class="payment-col-75">
+        <div class="payment-container">
+          <form id="delivery-address-form">
+            <span>
+                <input class="payed" type="checkbox" checked="checked" name="sameadr" id="sameadr"><span id="sameadr-explanation">Delivery address same as previous order</span>
+              </span>
+            <div class="payment-row" style="width: 100%;">
+              <div id="delivery-addr-inputs" class="payment-col-50">
+                <h3>Delivery Address</h3>
+                <span for="fname"><i class="fa fa-user"></i> Full Name</span>
+                <input class="payed" type="text" id="fname" name="firstname" placeholder="Zeel Khokhariya" required>
+                <span for="email"><i class="fa fa-envelope"></i> Email</span>
+                <input class="payed" type="email" id="email" name="email" placeholder="Zeel@example.com">
+                <br/><br/>
+                <span for="adr"><i class="fa fa-address-card-o"></i> Address</span>
+                <input class="payed" type="text" id="adr" name="address" placeholder="531 Paddington Road" required>
+                <span for="city"><i class="fa fa-institution"></i> City</span>
+                <input class="payed" type="text" id="city" name="city" placeholder="Winnipeg" required>
+    
+                <div class="payment-row">
+                  <div class="payment-col-50">
+                    <span for="province">Province</span>
+                    <input class="payed" type="text" id="province" name="province" placeholder="MB" required>
+                  </div>
+                  <div class="payment-col-50">
+                    <span for="postal">Postal Code</span>
+                    <input class="payed" type="text" id="postal" name="postal" placeholder="R2N2T3" required>
+                  </div>
+                </div>
+              </div>
+    
+              
+              
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div class="payment-row payment-cart">
+        <div class="payment-col-75">
+            <div class="payment-container">
+            <form class="payment-form">
+            
+                <div class="payment-row">
+                
+                <div class="payment-col-50">
+                    <h3>Payment</h3>
+                    <span for="fname">Accepted Cards</span>
+                    <div class="icon-container">
+                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                    </div>
+                    <span for="cname">Name on Card</span>
+                    <input class="payed" type="text" name="cardname" placeholder="Zeel Khokhariya" required>
+                    <span for="ccnum">Credit card number</span>
+                    <input class="payed" type="text" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+                    <span for="expmonth">Exp Month</span>
+                    <input class="payed" type="text" name="expmonth" placeholder="December" required>
+                    <div class="payment-row">
+                        <div class="payment-col-50">
+                            <span for="expyear">Exp Year</span>
+                            <input class="payed" type="text" name="expyear" placeholder="2022" required>
+                        </div>
+                        <div class="payment-col-50">
+                            <span for="cvv">CVV</span>
+                            <input class="payed" type="text" name="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+                <input class="payment-btn" class="payed" type="submit" value="PAY FOR CART" class="btn">
+            </form>
+            <div class="payment-successful" style="display:none;">
+                Payment successful!
+            </div>
+            </div>
+        </div>
+    
+        <div class="payment-col-25">
+            <div class="payment-container">
+            <h4><span class="pay-item-name">Cart1</span> <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b class="payment-number-of-items">4</b></span></h4>
+            <div class="pay-item-list">
+                <div class="pay-item-individual">
+                    <p><span class="pay-item-name">Product 1</span> <span class="price">$15</span></p>
+                    <p><span class="pay-item-customization cart-item-spiciness">Extra spicy</span></p>
+                    <p><span class="pay-item-customization cart-item-special-instructions">Special instructions:</span>
+                </div>
+            </div>
+            <hr>
+            <p><span class="pay-item-name">Total</span> <span class="total-price" style="color:black"><b>$30</b></span></p>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>
+    <div id="donePage" style="display:none">
+
+        <div class="payment-header">
+            <h1>Your Payment got accepted!</h1>
+        </div>
+        
+        <div class="payment-swipe"></div>
+        
+        <div class="payment-header">
+            <h1>Preparing your food!</h1>
+        </div>
+        
+        <div class="preparing-food" >
+        
+            <video autoplay muted loop id="myVideo">
+            
+                <source src="resources/css/image/preparing_order.mp4" type="video/mp4">
+            </video>
+            
+        </div>
+        
+        <div class="continue-shop">
+            <button id="continue-shop-button" class="continue-shop-button">Continue Shopping</button>
+        </div>
+        
+
+    </div>
+
+
+<!-- ending --------------------------------------------------------------------------------------------------->
+
+
+
+    </header>
+
+
+    <p>
+        <button class="open-button" onclick="openForm()"
+            style="text-align: center; background-color: darkslategray;"><b> Need Help</b> <i
+                class="far fa-question-circle" style="color: red;font-size: 20px;"></i></button>
+
+    <div class="chat-popup" id="myForm">
+        <form action="javascript:void(0);" class="form-container">
+            <h2 style="text-align: center;" id="changer">Let us know what's troubling you?</h2>
+
+            <label id="chat-message-area-label" for="msg"><b>Message</b></label>
+            <textarea id="chat-message-area" placeholder="Type message.." name="msg" required></textarea>
+
+            <button id="chat-send-button" type="submit" class="btn" onclick="sendForm()">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    </p>
+
+
+
+    <footer>
+        <div class="footerFirst">
+            <div class="footerLogo">
+                <img src="resources/css/image/logo.png" alt="logo" class="logo">
+            </div>
+        </div>
+
+        <div class="footerSecond">
+            <div class="footerData">
+                <font color="white">
+                    <h3>CONTACT & SUPPORT</h3>
+                </font><br>
+                <i class="fa fa-phone"></i> &nbsp;<a class="contact">1-800-208-9898</a><br>
+                <i class="fa fa-envelope"></i> &nbsp;<a href="mailto:Group7@gmail.com" class="mail_id"
+                    target="_blank">Group7@gmail.com</a><br>
+                <i class="fa fa-star"></i> &nbsp;<a href="#" onclick="showPage('feedback')" class="feedback">Give feedback</a><br>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>

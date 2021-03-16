@@ -1,0 +1,112 @@
+#donePage
+{
+    background-color: #101010;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: scroll;
+    height: 100vh;
+}
+
+.payment-header
+{
+    display: block;
+    margin-top: 2%;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.donePageHeader {
+    background:linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) ),url(image/menu-background.jpg) no-repeat center center fixed; 
+    /*background-color: brown;*/
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    border-bottom: 1px dashed gray;
+    line-height: 1.5;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+}
+
+.payment-swipe
+{
+    display: block;
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius:50%;
+    width: 50%;
+    height: 25%;
+    background-color: aliceblue;
+    background: url("image/Credit-Card-Swipe.gif") no-repeat center center;
+        background-size: contain;
+}
+
+.preparing-food
+{
+    margin-right: 20%;
+    margin-left: 20%;
+    display: block;
+    width: 60%;
+    height: 30%;
+}
+
+#myVideo
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.continue-shop
+{
+    width: 20%;
+    margin-top: 2%;
+    display: block;
+    height: 5%;
+}
+
+.continue-shop
+{
+    margin-right: 40%;
+    margin-left: 40%;
+    width: 20%;
+    margin-top: 2%;
+    display: block;
+    height: 5%;
+   
+
+}
+
+.continue-shop a
+{
+    
+    text-decoration: none;
+
+}
+
+.continue-shop-button
+{
+    
+    text-align: center;
+    cursor: pointer;
+    display: block;
+      background-color:#101010 ;
+  color: white;
+  border: 2px solid white;
+    width: 100%;
+    height: 100%;
+      font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+ 
+}
+
+.continue-shop-button:hover {
+  background-color: white;
+  color: #101010;
+    transition: 0.8s;
+}
